@@ -1,0 +1,14 @@
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 25vw;
+}
+
+input, label {
+  width: 10vmin, 30vmax;
+}
+
+kebab {
+    color:blue;
+}

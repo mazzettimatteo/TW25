@@ -1,0 +1,23 @@
+29-09-2025
+per entrare sul server DISI una volta accesso abilitato:
+
+>ssh matteo.mazzetti13@studio.unibo.it nota che la mail sara diversa
+>password
+
+accesso fatto
+
+naviga con cd, ls, 
+vai su folder home, poi cartella web
+>ls
+>cd site ##2526
+>ls
+la cartella site è dove caricheremo tutti i contenuti con(ssh o filezilla)
+
+
+accesso a gocker:
+da macchina a cui ho fatto accesso con ssh devo fare:
+>ssh gocker
+
+
+sito importante: https://site212248.tw.cs.unibo.it/
+codepen: https://codepen.io/
