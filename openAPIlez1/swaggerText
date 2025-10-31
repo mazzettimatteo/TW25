@@ -1,0 +1,125 @@
+swagger: "2.0"
+info:
+  description: "esercizio 1 Ristorante API"
+  version: "1.0.0"
+  title: "ristorants"
+host: "petstore.swagger.io"
+basePath: "/v2"
+schemes:
+- "https"
+- "http"
+paths:
+#parte 2, qui ci vanno tutte le operazioni: 
+  /menu/:
+    get:
+      #operazione di get sull'endpoint menu
+      operationId: getMenu
+      responses:
+        '200': 
+          description: 'successful. Elenco menu'
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Menu'
+              #se togliessi le due righe sopra avrei semplicemente un menu come valore di ritorno e non un array
+    post:
+      #operazione di aggiunta menu
+      operationId: addMenu
+      description: adds a new menu
+      responses:
+        '200':
+          description: 'successful. added a menu'
+          schema:
+            $ref: '#/definitions/Menu'
+            #ritorna il menu appena aggiunto
+            #potrei anche scrivere tutta le def del menu come descrita di definitions/Menu
+        '400':
+          description: 'c è un errore bro'
+          schema:
+            type: string
+            example: errorererer
+      parameters:
+        #parametri di input: prende un menu in input
+        - name: novvoMenu
+          in: body
+          #sto inserendo un parametro di tipo body
+          required: true
+          #parametro obligatorio
+          schema:
+            $ref: '#/definitions/Menu'
+            
+
+#ottenere le informazioni di uno specifico menu
+  /menu/{idMenu}:
+    get:
+      operationId: getDetailsMenu
+      parameters:
+        - name: idMenu
+          in: path
+          required: true
+          type: integer
+      responses:
+        '200': 
+          description: 'Dettaglio menu'
+          schema:
+            $ref: '#/definitions/Menu'
+  
+  /menu/{idMenu}/piatti:
+    post:
+      operationId: addPiatto
+      parameters:
+        - name: idMenu
+          in: path
+          required: true
+          type: integer
+        - name: nuovoPiatto
+          in: body
+          schema: 
+            $ref: '#/definitions/Piatto'
+      responses:
+        '200':
+          description: 'added plate to menu'
+          schema:
+            $ref: '#/definitions/Piatto'
+          
+          
+
+definitions:
+#parte 1
+  Menu:
+    type: object
+    properties:
+      menuID:
+        type: integer
+        format: int64
+      description:
+        type: string
+      price:
+        type: integer
+      piatti:
+        type: array
+        items:
+          $ref: '#/definitions/Piatto'
+        
+        
+  Piatto:
+    type: object
+    properties:
+      piattoID:
+        type: integer
+        format: int64
+      descripption:
+        type: string
+      price:
+        type: integer
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

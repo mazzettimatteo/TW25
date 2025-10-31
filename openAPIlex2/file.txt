@@ -1,0 +1,52 @@
+
+
+
+swagger: "2.0"
+info:
+  description: "my API"
+  version: "1.0.0"
+  title: "Swagger Esercizio Blog di Botanica"
+host: "www.blogdibotanica.it"
+basePath: "/v1"  
+schemes:
+- "https"
+- "http"
+
+paths:
+
+
+
+definitions:
+  Articolo:
+    type: object
+    properties:
+      articleID:
+        type: integer
+        format: int64
+        example: 1814833
+      publicationDate:
+        type: string
+        format: date
+        example: 2005-09-15
+      title:
+        type: string
+        example: article title
+      content:
+        type: string
+        example: contenuto testuale dell'articolo. Lorem ipsum
+      categorie:
+        type: array
+        items:
+          type: string
+          enum: ['orto', 'fiori', 'attrezzi', 'prodotti', 'consigli', 'news']
+
+
+
+
+
+
+
+
+
+
+
