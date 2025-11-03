@@ -1,0 +1,15 @@
+/*Animazioni*/
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 100;
+        transform: translateY(0);
+    }
+}
+/*definisco classe per usare su html l'animazione*/
+.fade-in-up{
+    animation: fadeInUp 1s linear;
+}
