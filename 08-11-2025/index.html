@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    
+</head>
+<body>
+    <h1 id="title" class="title">Calculator in javascript</h1>
+    <div class="buttons">
+        <div class="numberButtons">
+            <div class="numbers" id="1" onclick="getId(this)">1</div>
+            <div class="numbers" id="2" onclick="getId(this)">2</div>
+            <div class="numbers" id="3" onclick="getId(this)">3</div>
+            <div class="numbers" id="4" onclick="getId(this)">4</div>
+            <div class="numbers" id="5" onclick="getId(this)">5</div>
+            <div class="numbers" id="6" onclick="getId(this)">6</div>
+            <div class="numbers" id="7" onclick="getId(this)">7</div>
+            <div class="numbers" id="8" onclick="getId(this)">8</div>
+            <div class="numbers" id="9" onclick="getId(this)">9</div>
+            <div class="numbers" id="0" onclick="getId(this)">0</div>
+        </div>
+        <div class="operationButtons">
+            <div class="operations" id="equal" onclick="showResult()">=</div>
+            <div class="operations" id="clear" onclick="clear()">AC</div>
+            <div class="operations" id="sum" onclick="mathOperations(this)">+</div>
+            <div class="operations" id="sub" onclick="mathOperations(this)">-</div>
+            <div class="operations" id="mult" onclick="mathOperations(this)">x</div>
+            <div class="operations" id="div" onclick="mathOperations(this)">÷</div>
+            <div class="operations" id="pow" onclick="mathOperations(this)">^</div>
+        </div>
+        
+    </div>
+    <div id="result"></div>
+
+
+    <script src="code.js"></script> 
+</body>
+</html>

@@ -1,0 +1,70 @@
+:root{
+    /*  colori  */
+    --blackCol: #0A0F0D;
+    --pinkCol: #EE4266;
+    --purpleCol: #2A1E3C;
+    --grayCol: #C4CBCA;
+    --lightBlueCol: #3CBBB1;
+    /*  fonts   */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
+    color: var(--blackCol);
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 50px;
+}
+
+.numberButtons{
+    display: grid;
+    grid-template-columns: repeat(4,40px);
+    grid-gap:4px;
+}
+
+.operationsButtons{
+    display: grid;
+    grid-template-columns: repeat(1,40px);
+    grid-gap:4px;
+}
+
+.numbers{
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid var(--lightBlueCol);
+    background-color: var(--lightBlueCol);
+}
+
+
+.operations{
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid var(--pinkCol);
+    background-color: var(--pinkCol);
+}
+
+#equal{    
+    height: 20px;
+    width: 40px;
+    border-radius: 4px;
+    border: 2px solid var(--purpleCol);
+    background-color: var(--purpleCol);
+    color:var(--grayCol);
+}
+
+#result{
+    width: 162px;
+    height: 20px;
+    border-radius: 4px;
+    border: 5px solid var(--purpleCol);
+    margin:4px 50px 50px 50px;
+}
