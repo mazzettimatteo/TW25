@@ -1,0 +1,23 @@
+document.getElementById("PRIMO").style.backgroundColor="#FFC0CB";
+const lista=document.querySelectorAll(".QUADRATINO");
+
+
+var righe=8
+for(var j=0;j<lista.length;j++) 
+lista[j].style.backgroundColor="white";
+
+
+
+
+
+for(r=0;r<righe;r++){
+ if(r%2==1){
+for(i=0;i<8;i+=2) lista[r*8+i].style.backgroundColor="black";
+}
+else{
+for(i=1;i<8;i+=2) lista[r*8+i].style.backgroundColor="black";
+
+}
+ 
+
+}
