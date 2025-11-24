@@ -9,26 +9,33 @@ Ritorna true se la mossa è andata a buon fine.
 Collega il prototipo a posizioni con Object.setPrototypeOf(posizioni, BoardProto).
 Prova (facoltativo): posizioni.spostaPezzo('e2','e4').
 
-const BoardProto={
-  spostaPezzo(da,a){
-    if(!this.da) {return false;}
-    const pezzo = this.da;
-    delete this.da;
-    this.a=pezzo;
-    from=document.getElementById(da);
-    to=document.getElementById(a);
-    if(to.img) {to.img=null;}
-    if(from.img){
-      to.img=from.img;
-      from.img=null;
+const BoardProto = {
+  spostaPezzo(da, a) {
+    if (!this[da]) {return false;}
+
+    const pezzo = this[da];
+    delete this[da];
+    this[a] = pezzo;
+
+    let from = document.getElementById(da);
+    let to = document.getElementById(a);
+
+    let img_to = to.querySelector("img"); //evetuale imm. d'arrivo
+    let img_from = from.querySelector("img");
+
+    if (img_to) img_to.remove(); //se esiste imm d'arrivo allora tolgo la elimino
+    if (img_from) { //se c'era imm. di partenza
+      to.appendChild(img_from); //metto l'imm. di partenza nella sua destinazione d'arrivo che nell' if prima ho svuotato 
     } 
-    else{
-      to.img=PIECE_URLS[pezzo];
+    else { //se non c'era alcuna imm di partenza
+      let nuovaImm = document.createElement("img"); //ne creo una nuova
+      nuovaImm.src = PIECE_URLS[pezzo];
+      to.appendChild(nuovaImm); //e la metto nella destinazione
     }
     return true;
   }
-}
+};
 
 Object.setPrototypeOf(posizioni, BoardProto);
 
-posizioni.spostaPezzo("e2","e4");
+//posizioni.spostaPezzo("e2", "e4");
