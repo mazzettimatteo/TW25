@@ -24,10 +24,10 @@ function setImgWithPiece(pezzo){
 }
 
 function showImg(casella){
-    pezzo=pezzi[casella.dataset.casella];//?????????
+    pezzo=pezzi[casella.dataset.square];//?????????
     if(pezzo!=null){ 
         foto=setImgWithPiece(pezzo);
-        casella.appendChild(foto);//????????
+        casella.appendChild(foto); //????????
     }
 }
 

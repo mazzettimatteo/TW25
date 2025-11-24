@@ -1,0 +1,34 @@
+Crea un prototipo (es. const BoardProto = { ... }) con spostaPezzo(da, a) che:
+Legge il pezzo da this[da]; se non c’è, ritorna false o lancia un Error.
+Aggiorna lo stato: delete this[da]; this[a] = pezzo.
+Aggiorna il DOM:
+from = document.getElementById(da), to = document.getElementById(a)
+Se to ha un <img>, rimuovilo (cattura).
+Se from ha un <img>, sposta quel nodo dentro to (altrimenti ricrea l’immagine con PIECE_URLS[pezzo]).
+Ritorna true se la mossa è andata a buon fine.
+Collega il prototipo a posizioni con Object.setPrototypeOf(posizioni, BoardProto).
+Prova (facoltativo): posizioni.spostaPezzo('e2','e4').
+
+const BoardProto={
+  spostaPezzo(da,a){
+    if(!this.da) {return false;}
+    const pezzo = this.da;
+    delete this.da;
+    this.a=pezzo;
+    from=document.getElementById(da);
+    to=document.getElementById(a);
+    if(to.img) {to.img=null;}
+    if(from.img){
+      to.img=from.img;
+      from.img=null;
+    } 
+    else{
+      to.img=PIECE_URLS[pezzo];
+    }
+    return true;
+  }
+}
+
+Object.setPrototypeOf(posizioni, BoardProto);
+
+posizioni.spostaPezzo("e2","e4");

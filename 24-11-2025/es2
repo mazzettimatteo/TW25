@@ -1,0 +1,55 @@
+squares = document.querySelectorAll(".square")
+
+for (cella of squares) {
+    cella.addEventListener("click", foo);
+}
+
+function foo() {
+    coord = event.target.id()
+    if (posizioni[coord] != null) {
+        pezzo = posizioni[coord];
+        nome = NOMI_PEZZI[pezzo]
+        alert("Cella cliccata:" + coord + "\nPezzo presente:" + nome);
+    }
+    else alert("cella vuota")
+
+}
+
+oppure se vuoi che solo cella.addEventListener possa accedrvi
+
+squares = document.querySelectorAll(".square")
+
+for (cella of squares) {
+
+    function foo() {
+        coord = event.target.id()
+        if (posizioni[coord] != null) {
+            pezzo = posizioni[coord];
+            nome = NOMI_PEZZI[pezzo]
+            alert("Cella cliccata:" + coord + "\nPezzo presente:" + nome);
+        }
+        else alert("cella vuota")
+
+    }
+
+    cella.addEventListener("click", foo);
+}
+
+o ancora meglio
+
+squares = document.querySelectorAll(".square")
+
+for (cella of squares) {
+    cella.addEventListener("click", foo{
+        coord = event.target.id()
+            if (posizioni[coord] != null) {
+                pezzo = posizioni[coord];
+                nome = NOMI_PEZZI[pezzo]
+                alert("Cella cliccata:" + coord + "\nPezzo presente:" + nome);
+            }
+            else alert("cella vuota")
+
+    });
+}
+
+
