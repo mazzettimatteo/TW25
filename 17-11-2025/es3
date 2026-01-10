@@ -1,0 +1,34 @@
+//https://remogrillo.github.io/tw2025/esercitazioniJS.html fai es 3
+
+const pezzi = {
+'a2': 'wp', 'b2': 'wp', 'c2': 'wp', 'd2': 'wp', 
+'e2': 'wp', 'f2': 'wp', 'g2': 'wp', 'h2': 'wp',
+
+'a6': 'bp', 'b6': 'bp', 'c6': 'bp', 'd6': 'bp', 
+'e6': 'bp', 'f6': 'bp', 'g6': 'bp', 'h6': 'bp',
+
+'a1': 'wr', 'b1': 'wn', 'c1': 'wb', 'd1': 'wq',
+'e1': 'wk', 'f1': 'wb', 'g1': 'wn', 'h1': 'wr',
+
+'a8': 'br', 'b8': 'bn', 'c8': 'bb', 'd8': 'bq',
+'b8': 'wk', 'b8': 'wb', 'b8': 'bn', 'h8': 'br',
+}
+
+
+celle=document.querySelectorAll(".square");
+
+function setImgWithPiece(pezzo){
+    var img=document.createElement("img")//????????????
+    img.src="https://github.com/GiorgioMegrelli/chess.com-boards-and-pieces/blob/master/pieces/bases/"+pezzo+".png?raw=true";
+  return img;
+}
+
+function showImg(casella){
+    pezzo=pezzi[casella.dataset.square];//?????????
+    if(pezzo!=null){ 
+        foto=setImgWithPiece(pezzo);
+        casella.appendChild(foto); //????????
+    }
+}
+
+celle.forEach(showImage)//???????

@@ -1,0 +1,10 @@
+ESERCIZI: https://site212248.tw.cs.unibo.it/exercises/ex16
+
+GITHUB: https://github.com/aschimmenti/wikidata-weather-exercise
+
+La API che useremo saranno:
+- Wikibase API
+- Openwheather
+- LLM
+
+Login per openwheathermap.org: troll@gmail P...!
