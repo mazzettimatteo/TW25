@@ -19,7 +19,7 @@ body #main-nav ul .active p { color:blueviolet}
 body #main-nav ul .active p { color: salmon} 
 /*(1,1,3)*/
 
-body #main-nav ul .active { color: gray} 
+body #main-nav ul .active { color: teal} 
 /*(1,1,2)*/
 
 nav ul li.active p { color:green; }
@@ -32,6 +32,6 @@ nav ul li.active p { color:green; }
     - escludo ORANGERED: perché non rispetta gerarchia html
     - escludo YELLOW: non ha i val più alti di tutti escludendo quelli che hanno 0 in un elem
     - escludo BLUEVIOLET: è seguito da un'altro che ha gli stessi val (1,1,3): il salmon 
-    - escludo GRAY: (1,1,2)<(1,1,3)
-    - rimane SALMON
+    - escludo TEAL: (1,1,2)<(1,1,3)
+    - rimane SALMON: il testo "link" apparirà color salmone
     */
