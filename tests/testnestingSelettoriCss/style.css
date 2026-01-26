@@ -1,0 +1,80 @@
+        /* --- Stili di base per la pagina (solo per estetica) --- */
+        body {
+            font-family: sans-serif;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: flex-start;
+            background-color: #f4f4f4;
+        }
+
+        h3 { margin-bottom: 10px; margin-top: 0; }
+        
+        /* --- IL CODICE CSS CON NESTING --- */
+        .btn {
+            /* Stile base */
+            background-color: #0cc56c;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            font-size: 16px;
+            border: 2px solid transparent; /* Per evitare salti quando si aggiunge il bordo */
+            transition: all 0.2s ease;
+
+            /* 1. Pseudo-classe :hover , quindi &:hover appartiene alle specifiche di stile di .btn*/
+            &:hover {
+                background-color: #0056b3;
+                cursor: pointer;
+                transform: translateY(-2px); /* Un piccolo effetto di sollevamento */
+            }
+
+            /* 2. Classe concatenata .active */
+            &.active {
+                border-color: #ffd700; /* Giallo oro */
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+            }
+
+            /* 3. Pseudo-elemento ::before (l'icona) */
+            &::before {
+                content: "➜";
+                margin-right: 8px;
+                font-weight: bold;
+            }
+
+            /* 4. Contesto (Reverse Nesting) */
+            /* Quando questo bottone è dentro .dark-mode */
+            .dark-mode & {
+                background-color: #444;
+                color: #e0e0e0;
+
+                /* Possiamo annidare ulteriormente! */
+                &:hover {
+                    background-color: #666;
+                    color: #fff;
+                }
+            }
+        }
+
+        /* Stile per il contenitore Dark Mode */
+        .dark-mode {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            color: #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+#headOfNav{
+    font-size: 5em;
+    background-color: red;
+    color:aqua;
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
