@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script language="JavaScript">
+      window.onkeypress = pressed;
+      window.onclick = clicked;
+      //In pratica qui sopra definisco l'azione che dovrà attivare la funzione clicked(), ma non invoco direttamente la funzione:
+      //non metto "clicked()" ma "clicked" senza parentesi.
+      //quindi sto solo dicendo al codice di associare l'evento di click alla funzione "clicked()" ma di eseguirla una volta che avviene quell'evento
+      //Dunque è come se dicessi al browser: "Io vado avanti a leggere il documento HTML, tu invece quando accade l'evento X, richiamami(avvisami) eseguendo la funzione"
+
+      function pressed(e) {
+        alert("Key " + e.which + " pressed!");
+      }
+
+      function clicked() {
+        alert("you just clicked the mouse btn");
+      }
+    </script>
+  </head>
+  <body>
+    <p id="mypara">
+      Puoi
+      <a href="test.html" onclick="alert('LINK')">cliccare qui</a>
+      oppure qui.
+    </p>
+  </body>
+</html>
