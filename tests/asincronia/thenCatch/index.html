@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Capire le Promesse</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        text-align: center;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      #stato {
+        margin-top: 20px;
+        font-weight: bold;
+        color: grey;
+      }
+      #risultato {
+        margin-top: 10px;
+        font-size: 24px;
+      }
+      .errore {
+        color: red;
+      }
+      .successo {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Il Pizzaiolo Asincrono 🍕</h1>
+
+    <button onclick="faiOrdine()">Ordina una Pizza</button>
+
+    <div id="stato">In attesa dell'ordine...</div>
+    <div id="risultato"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
