@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Fetch</title>
+    <style>
+      #risultato {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+        background: #f9f9f9;
+      }
+
+      @keyframes myAnimation {
+        from {
+          background-color: red;
+        }
+        50% {
+          background-color: slateblue;
+        }
+        to {
+          background-color: rgb(0, 255, 26);
+        }
+      }
+      #mydiv {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: myAnimation;
+        animation-duration: 8s;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Esempio Fetch</h2>
+    <button onclick="scarica()">Scarica Dati dal Server</button>
+
+    <div id="risultato">I dati appariranno qui...</div>
+
+    <div id="mydiv"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
