@@ -5,3 +5,4 @@ tests/testReact1/my-react-app/node_modules/
 tests/reactRouterClientSide/node_modules/
 tests/reactRouterClientSide/my-router-app/node_modules/
 tests/reactRouterClientSide/my-next-app/node_modules/
+tests/mongo/node_modules/
