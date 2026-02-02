@@ -15,6 +15,7 @@ mongoose.connect(url)
 
 //definiamo la struttura che ogni studente avrà: sto creando uno schema con mongoose(in genere però mongodb è noSQL)
 const studentSchema=new mongoose.Schema({
+    //_id: mongoose.Schema.ObjectId, //questo id, adesso è richiesto esplicitamente, altrimenti assegnato in automatico, servirà poi come chiave di ricerca nel db
     nome: String,
     cognome: String,
     matricola: {type: Number, required: true},
