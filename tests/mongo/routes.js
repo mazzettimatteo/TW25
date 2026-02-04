@@ -30,4 +30,32 @@ router.get("/list", async (req,res)=>{
     }
 })
 
+router.put("/update", async (req,res)=>{
+    try{
+        const ricercato={matricola: req.body.matricola}
+        const update={
+            $set: {
+                nome: req.body.nome,
+                cognome: req.body.cognome
+            }
+        }
+
+        const updated=await Student.updateOne(ricercato, update)
+
+        if(updated.matchedCount===0){
+            return res.status(404).json({error: "student not found"})
+        }
+
+        res.json(updated)
+        console.log(`updated student ${req.body.matricola} with ${req.method}`)
+    }
+    catch(er){
+        res.status(500).json({error: er.message})
+    }
+})
+
+
+
+
+
 module.exports=router
