@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Palestra XPath per Principianti</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      .box {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+      }
+      .evidenziato {
+        color: red;
+        font-weight: bold;
+      }
+      #segreto {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Esercizi XPath: La Palestra</h1>
+
+    <div id="libreria" class="box">
+      <h2>Sezione Libri</h2>
+      <ul class="lista-libri">
+        <li class="libro" data-categoria="fantasy">
+          <span class="titolo">Il Signore degli Anelli</span>
+          <span class="autore">Tolkien</span>
+          <span class="prezzo">25€</span>
+        </li>
+        <li class="libro" data-categoria="scifi">
+          <span class="titolo">Dune</span>
+          <span class="autore">Herbert</span>
+          <span class="prezzo">18€</span>
+        </li>
+        <li class="libro" data-categoria="fantasy">
+          <span class="titolo">Harry Potter</span>
+          <span class="autore">Rowling</span>
+          <span class="prezzo">20€</span>
+        </li>
+      </ul>
+    </div>
+
+    <div id="area-login" class="box">
+      <h2>Accedi</h2>
+      <form action="/login">
+        <label>Username:</label>
+        <input
+          type="text"
+          id="user-input"
+          name="username"
+          placeholder="Inserisci nome"
+        />
+        <br /><br />
+        <label>Password:</label>
+        <input type="password" id="pass-input" name="password" />
+        <br /><br />
+        <button type="submit" id="btn-login" class="btn primary">Login</button>
+        <button type="button" class="btn secondary">Annulla</button>
+      </form>
+    </div>
+
+    <div class="box footer">
+      <h2>Link Utili</h2>
+      <a href="https://google.com" target="_blank">Vai su Google</a>
+      <br />
+      <a href="https://wikipedia.org">Vai su Wikipedia</a>
+      <br />
+      <a href="#" class="broken-link">Link rotto</a>
+      <p id="segreto">Messaggio nascosto: Hai trovato il nodo segreto!</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
