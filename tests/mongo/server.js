@@ -8,7 +8,7 @@ const routes=require("./routes.js")
 app.use(express.json())
 app.use(cors())
 
-app.use("/api/students", routes) //server per dire che tutte le rotte in "routes" iniziano con /api/students
+app.use("/api/students", routes) //middleware: serve per dire che tutte le rotte in "routes" iniziano con /api/students
 
 const PORT=3000
 app.listen(PORT,()=>{

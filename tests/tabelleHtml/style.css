@@ -1,0 +1,10 @@
+table {
+    border-collapse: collapse; /* Unisce i bordi doppi in uno singolo */
+    width: 100%;               /* Opzionale: allarga la tabella */
+}
+
+th, td {
+    border: 1px solid black;   /* Il bordo vero e proprio */
+    padding: 8px;              /* Spazio interno per non attaccare il testo al bordo */
+    text-align: left;          /* Allinea il testo */
+}

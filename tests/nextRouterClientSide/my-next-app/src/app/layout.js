@@ -25,7 +25,7 @@ export default function RootLayout({children}){
           </ul>
         </nav>
 
-        {/* CONTENUTO DINAMICO (Simile all'Outlet) */}
+        {/* CONTENUTO DINAMICO (Vi viene caricata la pag. che sto visitando) */}
         <main>
           {children}
         </main>

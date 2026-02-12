@@ -4,7 +4,7 @@ const app=express()
 app.use(express.json())  //dico che tutti i req.body verranno letti come JSON, questo è un MIDDLEWARE
 app.use((req,res,next)=>{
     console.log(`qualcuno ha chiamato ${req.url} con metodo ${req.method}.`)
-    next()
+    next() //serve per chiamare la prox funzione del middleware
 })
 
 app.get("/",(req,res)=>{   
